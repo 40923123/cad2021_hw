@@ -4,8 +4,10 @@
 <p>40923123</p>
 <p>網站倉儲: <a href="https://github.com/40923123/cad2021_hw">https://github.com/40923123/cad2021_hw</a></p>
 <p>網站連結: <a href="https://40923123.github.io/cad2021_hw/">https://40923123.github.io/cad2021_hw/</a></p>
-<p>2021.10.23進度更新: 今天使用wink想要放入網頁裡但目前不知甚麼原因無法正確嵌入</p><h1>WINK</h1>
+<p>2021.10.23進度更新: 今天使用wink想要放入網頁裡但目前不知甚麼原因無法正確嵌入 (已完成)</p>
+<p>2021.10.23(2)進度更新: 將wink的嵌入方法寫入網站裡 </p><h1>WINK</h1>
 <p>影片這周會處理完畢</p>
+<h2>wink 教學</h2>
 <p>再將wink的影片檔案放上來需要先記的用sharx的ffmpeg.exe轉檔程式，再來要記的放上以下指令</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&lt;script&gt;
 var winkVideoData = {
@@ -18,7 +20,8 @@ var winkVideoData = {
 };
 &lt;/script&gt;</pre>
 <p>此為wink的jave script必須放進網頁的代碼裡才可以<br/><br/></p>
-<p>以下為測試版會再進行更新</p>
+<p>以下為wink嵌入的教學</p>
+<p></p>
 <script>
 var winkVideoData = {
   dataVersion: 1,
@@ -29,8 +32,8 @@ var winkVideoData = {
   },
 };
 </script>
-<div class="winkVideoContainerClass"><video class="winkVideoClass" data-dirname="/static" data-varname="winkVideoData" height="1080" width="1920">
-<source src="downloads/wink2021.10.18.mp4" type="video/mp4"/></video>
+<div class="winkVideoContainerClass"><video class="winkVideoClass" data-dirname="/static" data-varname="winkVideoData" height="1082" width="1922">
+<source src="/downloads/2021.10.23/2021.10.23.mp4" type="video/mp4"/></video>
 <div class="winkVideoOverlayClass"></div>
 <div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
 <div class="winkVideoControlBarProgressLeftClass"></div>
@@ -39,20 +42,37 @@ var winkVideoData = {
 <div class="winkVideoControlBarProgressFilledMiddleClass"></div>
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
-<div class="winkVideoPlayOverlayClass">
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;div class="winkVideoContainerClass"&gt;&lt;video width="1920" height="1080" class="winkVideoClass" data-varname="winkVideoData" data-dirname="./../cmsimde/static"&gt;
-      &lt;source src="./../downlads/wink2021.10.18.mp4" type="video/mp4" /&gt;
-    &lt;/video&gt;
-&lt;div class="winkVideoOverlayClass"&gt;&lt;/div&gt;
-&lt;div class="winkVideoControlBarClass"&gt;&lt;button class="winkVideoControlBarPlayButtonClass"&gt;&lt;/button&gt; &lt;button class="winkVideoControlBarPauseButtonClass"&gt;&lt;/button&gt;
-&lt;div class="winkVideoControlBarProgressLeftClass"&gt;&lt;/div&gt;
-&lt;div class="winkVideoControlBarProgressEmptyMiddleClass"&gt;&lt;/div&gt;
-&lt;div class="winkVideoControlBarProgressRightClass"&gt;&lt;/div&gt;
-&lt;div class="winkVideoControlBarProgressFilledMiddleClass"&gt;&lt;/div&gt;
-&lt;div class="winkVideoControlBarProgressThumbClass"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="winkVideoPlayOverlayClass"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+<div class="winkVideoPlayOverlayClass"></div>
+</div><h2>wink test</h2>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 20,
+  buttonFrameLength: 10,
+  buttonFrameOffset: 5,
+  frameStops: {
+  },
+};
+</script>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 20,
+  buttonFrameLength: 10,
+  buttonFrameOffset: 5,
+  frameStops: {
+  },
+};
+</script>
+<div class="winkVideoContainerClass"><video class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="1080" width="1920">
+<source src="./../downloads/wink2021.10.18.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 </div><h1>HW1</h1>
 <p>HW1 佔學期成績 25%</p>
