@@ -261,6 +261,81 @@ var winkVideoData3 = {
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
+</div>
+<p>6.如何把UI系統叫出來</p>
+<p>此為程式的樣本需進行修改</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">function closeEventHandler(h)
+    sim.addLog(sim.verbosity_scriptinfos,'Window '..h..' is closing...')
+    simUI.hide(h)
+end
+ 
+function joint1_rotate(ui,id,newVal)
+    simUI.setLabelText(ui,3000,'theta1 set to '..newVal)
+    sim.setJointTargetPosition(joint1, newVal*deg)
+end
+ 
+function sysCall_init()
+    -- do some initialization here
+    joint1 = sim.getObjectHandle('motor1')
+
+    
+    deg = math.pi/180
+    print(i)
+        xml = [[
+    &lt;ui closeable="true" on-close="closeEventHandler" resizable="true"&gt;
+        &lt;label text="This is a demo of the CustomUI plugin. Browse through the tabs below to explore all the widgets that can be created with the plugin." wordwrap="true" /&gt;
+        &lt;tabs&gt;
+            &lt;tab title="Numeric"&gt;a
+                &lt;label text="Sliders can be oriented horizontally or vertically, and have optional properties that can be set (in the XML) such as minimum and maximum value." wordwrap="true" /&gt;
+                &lt;label text="" id="3000" wordwrap="true" /&gt;
+                &lt;label text="theta1" /&gt; &lt;hslider tick-position="above" tick-interval="1"
+                minimum="0" maximum="360" on-change="joint1_rotate" /&gt;
+            &lt;/tab&gt;
+        &lt;/tabs&gt;
+    &lt;/ui&gt;
+    ]]
+    ui=simUI.create(xml)
+     
+end</pre>
+<p>下面為影片</p>
+<p></p>
+<script>
+var winkVideoData4 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+    "2": [
+      { type: "gotoframe", rect: { x: 694, y: 151, width: 60, height: 24 }, target: 3 },
+    ],
+    "120": [
+      { type: "gotoframe", rect: { x: 971, y: 343, width: 60, height: 24 }, target: 121 },
+    ],
+    "151": [
+      { type: "gotoframe", rect: { x: 821, y: 569, width: 60, height: 24 }, target: 152 },
+    ],
+    "179": [
+      { type: "gotoframe", rect: { x: 720, y: 437, width: 60, height: 24 }, target: 180 },
+    ],
+    "223": [
+      { type: "gotoframe", rect: { x: 826, y: 91, width: 60, height: 24 }, target: 224 },
+    ],
+  },
+};
+</script>
+<div class="winkVideoContainerClass"><video class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData4" height="756" width="1344">
+<source src="./../downloads/2022.1.mp4" type="video/mp4"/>
+</video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
 </div><br />2021年12月1日檔案過大提交問題 << <a href='2021年12月1日檔案過大提交問題.html'>Previous</a> </div>
         
     <!-- footer -->
